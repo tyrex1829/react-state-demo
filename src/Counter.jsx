@@ -16,6 +16,9 @@ export default function Counter () {
                     alert("Can't go for negetive");
                 }
             }}>-1</button>
+            <button onClick={() => {
+                setCount(10);
+            }}>make 10</button>
         </div>
     )
 }
