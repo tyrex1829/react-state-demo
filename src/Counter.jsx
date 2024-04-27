@@ -9,6 +9,13 @@ export default function Counter () {
             <button onClick={() => {
                 setCount(count + 1);
             }}>+1</button>
+            <button onClick={() => {
+                if (count > 0) {
+                    setCount(count - 1);
+                } else {
+                    alert("Can't go for negetive");
+                }
+            }}>-1</button>
         </div>
     )
 }
