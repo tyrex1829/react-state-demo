@@ -14,12 +14,21 @@ export default function EmojiClicker () {
         })
     }
 
+    const makeEverythingHeart = () => {
+        setEmojis(prevEmojis => {
+            return prevEmojis.map(e => {
+                return {...e, emoji: "💓"}
+            })
+        })
+    }
+
     return (
         <div>
             {emojis.map(e => (
                 <span onClick={() => deleteEmoji(e.id)} key={e.id} style={{ fontSize: "4rem", cursor: "pointer" }}>{e.emoji}</span>
             ))}
             <button onClick={addEmoji}>Add Emoji</button>
+            <button onClick={makeEverythingHeart}>Make them all hearts</button>
         </div>
     );
 }
